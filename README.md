@@ -6,13 +6,11 @@ A Horizon mod that shows your coordinates on one line in the top-left corner:
 X: 123, Y: 65, Z: -45
 ```
 
-Just the coordinates — no facing, no clock, no day counter. `/coords` hides or
-shows the panel.
+Just where you are — clean and out of the way. `/coords` hides or shows the panel.
 
 ## Capabilities
 
-`game-read` (the player's position) and `hud` (the panel). No file, network or
-clock access.
+`game-read` (the player's position) and `hud` (the panel).
 
 ## Build
 
