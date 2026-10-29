@@ -1,0 +1,16 @@
+[package]
+name = "show-coordinates"
+version = "0.1.0"
+edition = "2024"
+description = "Coordinates the way Bedrock Edition shows them, for Horizon"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+horizon-mod-sdk = { git = "https://github.com/horizon-rust/horizon" }
+
+[profile.release]
+opt-level = "s"
+lto = true

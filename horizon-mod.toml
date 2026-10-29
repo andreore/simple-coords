@@ -1,0 +1,8 @@
+id = "coords_bedrock"
+name = "Show Coordinates"
+version = "0.1.0"
+description = "Coordinates the way Bedrock Edition shows them: X, Y and Z on one line in the top-left corner, and nothing else. /coords hides or shows the panel."
+authors = ["andreore"]
+api = "0.1"
+side = "client"
+capabilities = ["game-read", "hud"]
