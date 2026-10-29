@@ -7,13 +7,11 @@ A Horizon mod that shows your coordinates the way **Bedrock Edition** does with
 X: 123, Y: 65, Z: -45
 ```
 
-One line, top-left corner, and nothing else — no facing, no clock, no day
-counter. `/coords` hides or shows the panel.
+One line, top-left corner, and nothing else. `/coords` hides or shows the panel.
 
 ## Capabilities
 
-`game-read` (the player's position) and `hud` (the panel). No file, network or
-clock access.
+`game-read` (the player's position) and `hud` (the panel).
 
 ## Build
 
