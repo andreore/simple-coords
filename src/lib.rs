@@ -1,19 +1,19 @@
-//! Coordinates the way Bedrock Edition shows them with "Show Coordinates" on:
-//! `X: 123, Y: 65, Z: -45` on one line in the top-left corner, and nothing
-//! else — no facing, no clock. `/coords` hides or shows the panel.
+//! Coordinates on one line in the top-left corner: `X: 123, Y: 65, Z: -45`,
+//! and nothing else — no facing, no clock, no day counter. `/coords` hides or
+//! shows the panel.
 use horizon_mod_sdk::{
     Mod, Registration,
     game::{self, Player},
     hud::{self, Corner, Line},
 };
 
-struct ShowCoordinates {
+struct SimpleCoords {
     shown: bool,
     /// The panel last sent, so an unchanged one costs no call.
     last: Vec<String>,
 }
 
-/// `X: 123, Y: 65, Z: -45`: the block the player stands on, as Bedrock rounds it.
+/// `X: 123, Y: 65, Z: -45`: the block the player stands on, rounded to whole numbers.
 fn coords(p: &Player) -> String {
     format!(
         "X: {:.0}, Y: {:.0}, Z: {:.0}",
@@ -23,10 +23,10 @@ fn coords(p: &Player) -> String {
     )
 }
 
-impl Mod for ShowCoordinates {
+impl Mod for SimpleCoords {
     fn init() -> Result<(Self, Registration), String> {
         let hooks = Registration::new().command("coords").on_tick();
-        let state = ShowCoordinates {
+        let state = SimpleCoords {
             shown: true,
             last: Vec::new(),
         };
@@ -67,4 +67,4 @@ impl Mod for ShowCoordinates {
     }
 }
 
-horizon_mod_sdk::export_mod!(ShowCoordinates);
+horizon_mod_sdk::export_mod!(SimpleCoords);
