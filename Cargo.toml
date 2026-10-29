@@ -1,8 +1,8 @@
 [package]
-name = "show-coordinates"
+name = "simple-coords"
 version = "0.1.0"
 edition = "2024"
-description = "Coordinates the way Bedrock Edition shows them, for Horizon"
+description = "A minimal coordinates HUD for Horizon: X, Y and Z on one line, nothing else"
 license = "MIT"
 
 [lib]
